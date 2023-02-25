@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+
+    &__container {
+        margin: 0 auto;
+
+        &__sns {
+            width: 100%;
+            background: linear-gradient(to right, #FFA500, 45%, #00FF00, #0EDEE8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #FFF;
+            position: relative;
+
+            &__text {
+                margin-top: 50px;
+                padding: 2em 3em;
+                border: 1px solid #FFF;
+                position: relative;
+
+                span {
+                    position: relative;
+                }
+            }
+
+            &__text::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            &__list {
+                margin: 30px 0;
+
+                &__follow {
+                    font-weight: bold;
+                    font-size: 18px;
+                    padding-bottom: 20px;
+                    text-align: center;
+                }
+
+                &__icon {
+
+                    i {
+                        font-size: 2.6em;
+                        color: #FFF;
+                        margin-left: 20px;
+                        margin-right: 18px;
+                        position: relative;
+
+                        &:hover {
+                            transform: rotate(45deg);
+                            transition: transform 1s;
+                        }
+                    }
+                }
+            }
+
+            &__link {
+                width: 100%;
+                position: relative;
+                display: block;
+                text-align: center;
+
+                &__menu {
+
+                    &__logo {
+                        width: 6%;
+                        margin: 2%;
+                        position: relative;
+                    }
+
+                    &__list {
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+
+                        &__item {
+                            text-decoration: none;
+                            margin: 0.5em 1.2em;
+                            color: #FFF;
+                            position: relative;
+                        }
+                    }
+                }
+
+                &__rights {
+                    border-top: 1px solid #FFF;
+                    width: 80%;
+                    color: #FFF;
+                    padding: 1%;
+                    margin: 0.3em auto 0.5em auto;
+                    position: relative;
+                }
+            }
+
+            &__link::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .footer {
+
+        &__container {
+
+            &__sns {
+
+                &__text {
+                    width: 80%;
+                    padding: 1.5em;
+                    text-align: center;
+                }
+            }
+
+            &__link {
+
+                &__menu {
+
+                    &__logo {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .footer {
+
+        &__container {
+
+            &__sns {
+
+                &__text {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .footer {
+
+        &__container {
+            margin: 0 auto;
+
+            &__sns {
+
+                &__text {
+                    width: 76%;
+                    padding: 1em 2em;
+                }
+
+                &__list {
+
+                    &__follow {
+                        font-size: 20px;
+                    }
+                }
+
+                &__link {
+
+                    &__menu {
+                        display: flex;
+                        padding: 4% 0;
+
+                        &__logo {
+                            width: 40%;
+                            margin: 10px 10px 20px 10px;
+                        }
+
+                        &__list {
+                            margin-right: 7%;
+
+                            &__item {
+                                display: block;
+                                width: 40%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
