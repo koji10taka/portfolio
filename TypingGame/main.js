@@ -136,10 +136,9 @@ const timer = () => {
         });
     }, 1000);
 
-    // リセットボタンを押したらタイマーを0にしてゲームオーバーにする
+    // リセットボタンを押したらページリロード
     reset.addEventListener('click', () => {
-        time = 0;
-        count.textContent = time;
+        window.location.reload();
     });
 };
 
